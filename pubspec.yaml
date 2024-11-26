@@ -1,0 +1,151 @@
+name: mira
+
+publish_to: 'none'
+version: 2.0.4+7
+environment:
+  sdk: ">=3.2.2 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.19.0
+  routemaster: ^1.0.1
+  cupertino_icons: ^1.0.6
+  flutter_lints: ^3.0.1
+
+  # Local Packages
+  mira_api:
+    path: packages/mira_api
+  key_value_storage:
+    path: packages/key_value_storage
+  user_repository:
+    path: packages/user_repository
+#  history_mappers:
+#    path: packages/history_mappers
+#  custom_field_mappers:
+#    path: packages/custom_field_mappers
+#  task_repository:
+#    path: packages/task_repository
+#  contact_repository:
+#    path: packages/contact_repository
+#  deal_repository:
+#    path: packages/deal_repository
+#  company_repository:
+#    path: packages/company_repository
+  function_and_extension_library:
+    path: packages/function_and_extension_library
+
+    # Feature Packages
+    # Tasks
+#  tasks:
+#    path: packages/features/tasks
+#  task_details:
+#    path: packages/features/task_details
+#  tasks_calendar:
+#    path: packages/features/tasks_calendar
+#  create_task:
+#    path: packages/features/create_task
+
+    # Deals
+#  deals:
+#    path: packages/features/deals
+#  deal_details:
+#    path: packages/features/deal_details
+#  create_deal:
+#    path: packages/features/create_deal
+#  deals_table:
+#    path: packages/features/deals_table
+
+    # Contacts
+#  contacts:
+#    path: packages/features/contacts
+#  contact_details:
+#    path: packages/features/contact_details
+#  create_contact:
+#    path: packages/features/create_contact
+#  contacts_table:
+#    path: packages/features/contacts_table
+#
+
+    # Companies
+#  companies:
+#    path: packages/features/companies
+#  company_details:
+#    path: packages/features/company_details
+#  create_company:
+#    path: packages/features/create_company
+#  companies_table:
+#    path: packages/features/companies_table
+#
+
+#  create_note:
+#    path: packages/features/create_note
+#  create_activity:
+#    path: packages/features/create_activity
+#  associate_with:
+#    path: packages/features/associate_with
+#  dashboard:
+#    path: packages/features/dashboard
+  menu:
+    path: packages/features/menu
+#  general_settings:
+#    path: packages/features/general_settings
+#  app_users:
+#    path: packages/features/app_users
+#  notification_settings:
+#    path: packages/features/notification_settings
+#  tab_container:
+#    path: packages/features/tab_container
+
+
+    #Authentication
+  sign_in:
+    path: packages/features/sign_in
+  sign_up:
+    path: packages/features/sign_up
+  #general modules
+  task:
+    path: packages/features/task
+  # Domain Models and Component Library
+  domain_models:
+    path: packages/domain_models
+  component_library:
+    path: packages/component_library
+  firebase_core: ^3.3.0
+
+
+dependency_overrides:
+  wakelock:
+    git:
+      url: https://github.com/chandrabezzo/wakelock.git # repository
+      ref: main # branch
+      path: wakelock/ # folder
+
+
+flutter:
+  uses-material-design: true
+  generate: true
+
+  fonts:
+    - family: Tajawal
+      fonts:
+        - asset: fonts/Tajawal/Tajawal-Black.ttf
+        - asset: fonts/Tajawal/Tajawal-Bold.ttf
+        - asset: fonts/Tajawal/Tajawal-ExtraBold.ttf
+        - asset: fonts/Tajawal/Tajawal-ExtraLight.ttf
+        - asset: fonts/Tajawal/Tajawal-Light.ttf
+        - asset: fonts/Tajawal/Tajawal-Medium.ttf
+        - asset: fonts/Tajawal/Tajawal-Regular.ttf
+    - family: Gotham
+      fonts:
+        - asset: fonts/Gotham/GothamBold.ttf
+        - asset: fonts/Gotham/GothamBook.ttf
+        - asset: fonts/Gotham/GothamLight.ttf
+        - asset: fonts/Gotham/GothamMedium.ttf
+        - asset: fonts/Gotham/GothamMedium_1.ttf
+
+  assets:
+    - assets/
+    - assets/icons/

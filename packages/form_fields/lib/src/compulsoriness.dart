@@ -1,0 +1,4 @@
+enum Compulsoriness {
+  required,
+  optional,
+}
