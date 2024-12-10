@@ -4,8 +4,8 @@ import 'package:routemaster/routemaster.dart';
 
 class TabContainerScreen extends StatelessWidget {
   const TabContainerScreen({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -16,16 +16,22 @@ class TabContainerScreen extends StatelessWidget {
       controller: tabState.controller,
       tabBuilder: tabState.tabBuilder,
       tabBar: CupertinoTabBar(
-        items: [
+        items: const [
           BottomNavigationBarItem(
             label: 'menu',
-            icon: const Icon(
+            icon: Icon(
               Icons.person,
             ),
           ),
           BottomNavigationBarItem(
+            label: 'Categories',
+            icon: Icon(
+              Icons.menu,
+            ),
+          ),
+          BottomNavigationBarItem(
             label: 'menu',
-            icon: const Icon(
+            icon: Icon(
               Icons.format_quote,
             ),
           ),

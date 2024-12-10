@@ -1,0 +1,14 @@
+{
+  "contactUsButtonLabel": "Contact Us",
+  "notificationsButtonLabel": "Notifications",
+  "usersButtonLabel": "Users",
+  "generalSettingsButtonLabel": "General Settings",
+  "homesButtonLabel": "Homes",
+  "packagesButtonLabel": "Packages",
+  "userGreetingTitle": "Hello",
+  "logoutButtonLabel": "Logout",
+  "dealsButtonLabel": "Deals",
+  "companiesButtonLabel": "Companies",
+  "inviteUserButtonLabel": "Invite User",
+  "contactsButtonLabel": "Contacts"
+}

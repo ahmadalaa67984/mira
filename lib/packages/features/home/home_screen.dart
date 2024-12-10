@@ -5,8 +5,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:mira/packages/component_library/assets/assets.dart';
 import 'package:mira/packages/component_library/component_library.dart';
 import 'package:mira/packages/features/home/components/home_horizontal_carousel.dart';
-import 'package:mira/packages/features/home/components/home_search_bar.dart';
 import 'package:mira/packages/features/home/home_cubit.dart';
+import 'package:mira/packages/features/shared/components/mira_app_bar.dart';
 import 'package:mira/packages/features/shared/components/shared_item_card.dart';
 import 'package:mira/packages/mira_api/models/productes/hot_deals_productes.dart';
 import 'package:mira/packages/user_repository/user_repository.dart';
@@ -62,13 +62,7 @@ class HomesView extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(height: 40,),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Image.asset('assets/logo.png'),
-                      Expanded(child: HomeSearchBar()),
-                    ],
-                  ),
+                  MiraAppBar(),
                   SizedBox(height: 20),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -102,24 +96,26 @@ class HomesView extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      _buildCircle(context),
-                      _buildCircle(context),
-                      _buildCircle(context),
-                      _buildCircle(context),
-                    ],
+
+                  SizedBox(
+                    height: 100,
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: 4, // Horizontal scrolling
+                      itemBuilder: (ctx, index) {
+                        return _buildCircle(context);
+                      },
+                    ),
                   ),
-                  SizedBox(height: 20),
-                  Text(
+                  const SizedBox(height: 20),
+                  const Text(
                     'Hot Deals',
                     style: TextStyle(
                       fontSize: 25,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   SizedBox(
                     height: 200, // Constrain the height of the horizontal ListView
                     child: ListView.builder(
@@ -131,6 +127,33 @@ class HomesView extends StatelessWidget {
                       },
                     ),
                   ),
+                  const SizedBox(height: 10),
+                  const Text(
+                    'Extra Saving !',
+                    style: TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 450,
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal, // Horizontal scrolling
+                      itemCount: 3,
+                      itemBuilder: (ctx, index) {
+                        return Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            width: 250,
+                            decoration: BoxDecoration(
+                              color: theme.textColor,
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                  )
                 ],
               ),
             ),
@@ -150,15 +173,19 @@ class HomesView extends StatelessWidget {
   Widget _buildCircle(context) {
     final theme = MiraTheme.of(context);
 
-    return Container(
-      width: 100.0, // Circle width
-      height: 100.0, // Circle height
-      decoration: BoxDecoration(
-        color: theme.secondaryColor, // Circle color
-        shape: BoxShape.circle, // Make it a circle
+    return Padding(
+      padding: EdgeInsets.all(1),
+      child: Container(
+        width: 100.0, // Circle width
+        height: 100.0, // Circle height
+        decoration: BoxDecoration(
+          color: theme.secondaryColor, // Circle color
+          shape: BoxShape.circle, // Make it a circle
+        ),
       ),
     );
   }
+
 
 }
 

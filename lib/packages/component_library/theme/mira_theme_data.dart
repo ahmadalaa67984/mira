@@ -8,7 +8,7 @@ abstract class MiraThemeData {
 
   final iconColor = const Color(0xFF191F6D);
   final primaryColor = const Color(0xFFE62D2B);
-  final secondaryColor = const Color(0xFFF3603F);
+  final secondaryColor = const Color(0xFFF87976);
   final tertiaryColor = const Color(0xFFBA38F2);
 
   final dealLeadStageColor = const Color(0xFF5F45BF); // Lead
@@ -40,6 +40,7 @@ abstract class MiraThemeData {
   final switchInactiveTrackColor = Colors.grey;
   final initialsTextColor = const Color(0xFFA2A0A7);
 
+  final textColor=Color(0xFF807E7E);
   final backgroundColor = Color(0xFFF7F8FA);
 
   final screenMargin = Spacing.mediumLarge;
