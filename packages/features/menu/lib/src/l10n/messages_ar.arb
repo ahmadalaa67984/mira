@@ -1,0 +1,14 @@
+{
+  "contactUsButtonLabel": "اتصل بنا",
+  "notificationsButtonLabel": "الإشعارات",
+  "usersButtonLabel": "المستخدمون",
+  "generalSettingsButtonLabel": "الإعدادات العامة",
+  "tasksButtonLabel": "المهام",
+  "packagesButtonLabel": "الباقات",
+  "userGreetingTitle": "مرحبًا!",
+  "logoutButtonLabel": "تسجيل الخروج",
+  "dealsButtonLabel": "الصفقات",
+  "companiesButtonLabel": "الشركات",
+  "inviteUserButtonLabel": "دعوة مستخدم",
+  "contactsButtonLabel": "جهات الاتصال"
+}

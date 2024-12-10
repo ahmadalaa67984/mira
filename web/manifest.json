@@ -1,6 +1,6 @@
 {
-    "name": "mira_v2",
-    "short_name": "mira_v2",
+    "name": "vendor",
+    "short_name": "vendor",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
